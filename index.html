@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        h1{
+            color: black;
+            font-family: sans-serif
+        }
+
+        #botao{
+            width: 150px;
+            color: red;
+            background-color: black;
+        }
+
+        #botao:hover{
+            cursor: pointer;
+            box-shadow: 2px 2px 5px red;
+        }
+
+    </style>
+	<meta charset="utf-8">
+	<title>Simulador de Empréstimo</title>
+
+</head>
+<body>
+	  <h1>Simule o empréstimo</h1>
+        <p>Favor, preencha os campos abaixo</p>
+        <form name="meuform" method="POST" action="return.php">
+            <div>
+                <label for="cpf">Digite o CPF:</label>
+                <input type="text" name="cpf" id="cpf"
+                size="15" maxlength="15"required placeholder="Digite seu CPF" required>
+            </div>
+            <div>
+                <label for ="nome">Nome:</label>  
+                <input type="text" name="nome" id="nome"
+                size="25" maxlength="25" required placeholder="Digite seu nome" required>
+            </div>
+            <br>
+            <input id="botao" type="submit" value="Simular o empréstimo" href="POO2021_4termo/simuemp/return.php">
+            <input id="botao" type="reset" value="Limpar os dados">
+        </form>
+</body>
+</html>
