@@ -31,7 +31,7 @@ echo "<h1>".$nome. " <br>CPF do usuário: ".$cpf. "<br></h2>";
 
 		if ($calculo1 <> $cpf[9] || $calculo2 <> $cpf[10]){
 
-			return fase;
+			return false;
 		}
 			return true;
 	}
