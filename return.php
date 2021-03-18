@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<head>
+
+	<style>
+		
+		#retornar{
+			color: white;
+            font-family: sans-serif
+		}
+
+	</style>
+
+</head>
+
 <?php
 
 $nome = $_POST['nome'];
@@ -61,6 +74,6 @@ Colocar um link para voltar para nova simulação.
 <html>
 <br><br>
 
-<a href = "/POO2021_4termo/simuemp/index.html"> <h2>Retornar</h2></a>
+<a id="retornar" href = "/POO2021_4termo/simuemp/index.html"> <h2>Retornar</h2></a>
 
 </html>
