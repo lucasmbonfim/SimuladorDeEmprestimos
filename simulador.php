@@ -23,7 +23,7 @@
             background:blue;
             color: white;
         }
-        
+
     </style>
     <meta charset="UTF-8">
     <title>Simulador</title>
@@ -46,7 +46,7 @@
     <br>
     <br>
     <label for="parc">Quantidade de parcelas </label>
-    <input type="number" name="parc" required>   
+    <input type="number" name="parc" min="1" required>   
     <br>
     <br>
     <input id="botao" type="submit" value="Simular" >
