@@ -7,13 +7,11 @@
             color: white;
             font-family: sans-serif
         }
-
         #botao{
             width: 150px;
             color: blue;
             background-color: white;
         }
-
         #botao:hover{
             cursor: pointer;
             box-shadow: 2px 2px 5px white;
@@ -23,7 +21,6 @@
             background:blue;
             color: white;
         }
-
     </style>
     <meta charset="UTF-8">
     <title>Simulador</title>
@@ -32,21 +29,8 @@
     <h2>Simulador</h2>
     
 <form method="POST" action="juros.php">
-    <span>Selecione o valor do empréstimo: </span>
-                <select name="valor">
-                <option> Clique e escolha <selected> </option>
-                <option> 1000 </option>
-                <option> 1500 </option>
-                <option> 2000 </option>
-                <option> 2500 </option>
-                <option> 3000 </option>
-                <option> 4000 </option>
-                <option> 5000 </option>
-                </select>
-    <br>
-    <br>
-    <label for="parc">Quantidade de parcelas </label>
-    <input type="number" name="parc" min="1" required>   
+    <label for="emprestimo">Valor do empréstimo:</label>
+    <input type="text" name="emprestimo" min="1" required>   
     <br>
     <br>
     <input id="botao" type="submit" value="Simular" >
