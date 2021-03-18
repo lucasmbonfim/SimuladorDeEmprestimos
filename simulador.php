@@ -2,22 +2,28 @@
 <html lang="pt-br">
 <head>
     <style>
-
+      
         #x{
-            color: red;
+            color: white;
             font-family: sans-serif
         }
-         #botao{
+
+        #botao{
             width: 150px;
-            color: red;
-            background-color: black;
+            color: blue;
+            background-color: white;
         }
 
         #botao:hover{
             cursor: pointer;
-            box-shadow: 2px 2px 5px red;
-        }       
-
+            box-shadow: 2px 2px 5px white;
+        }
+        body{
+            text-align: center;
+            background:blue;
+            color: white;
+        }
+        
     </style>
     <meta charset="UTF-8">
     <title>Simulador</title>
