@@ -2,12 +2,15 @@
 <head>
 
 	<style>
-		
 		#retornar{
 			color: white;
             font-family: sans-serif
 		}
-
+        	body{
+            		text-align: center;
+            		background:blue;
+            		color: white;
+        }
 	</style>
 
 </head>
