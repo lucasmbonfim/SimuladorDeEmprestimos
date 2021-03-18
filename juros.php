@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <style>
+	<style>
 
-        h1{
-            color: blue;
-            font-family: sans-serif
-        }
+		body{
+			text-align: center;
+			background:blue;
+			color: white;
+		}
+		td{
+			text-align: center;
+			width:200px;
+		}
 
-        body{
-            text-align: center;
-            background:blue;
-            color: white;
-        }
-
-    </style>
-    <meta charset="UTF-8">
-    <title>Simulador</title>
+	</style>
+	<meta charset="UTF-8">
+	<title>Simulador</title>
 </head>
 <body>
-<?php
-$capital = $_POST['valor'];
-$parc =$_POST['parc'];
+	<?php
 
+	$valor = $_POST['emprestimo'];
 
-if($parc == 0){ 
-    $parc = 1;
-}
-$tx  = (3.5/100);
-$m = 0;
-$valpar = 0;
-if($capital == 'Clique e escolha'){
-    echo "<h1>Opção inválida. Favor, selecione uma opção válida! </h1>";
-    include("C:/xampp/htdocs/POO2021_4termo/simuemp/simulador.php");
-    }
-    else{ 
-        // calculo do montante M= C *(1+tx)**Parc.
-$m = ($capital*((1+$tx)**$parc));
-$valpar = $m/$parc;
-$tx=($tx*100);
+	echo"<center><table border='1'>";
+	echo "<tr>";
+	echo "<td>Parcela";
+	echo "</td>";
+	echo "<td>Valor";
+	echo "</td>";
+	echo "<td>Montante";
+	echo "</td>";
+	echo "<td>Taxa";
+	echo "</td>";
+	echo "</tr>";
+	for($i=2;$i<=24;$i++){  
 
-$resultvalor = number_format($m, 2);
-$resultpar = number_format($valpar, 2);
-//Resumo da Simulação
-echo "<h1>Empréstimo:</h1><br>";
-echo "<b>Total R$:</b> ".$resultvalor."<br><br>";
-echo "<b>Valor da(s) parcela(s): </b> ".$resultpar;
-echo "<br><br>Taxa de serviço: ".$tx."%<br><br>";
-    }
-?>
+		$m=$valor*(1+0.0164)**$i;
+		$m= number_format($m, 2, '.', '');
+		$valorp=$m/$i;
+		$valorp = number_format($valorp, 2, '.','');
+
+		echo "<center><table border='1'>";     
+		echo "<tr>";
+
+		echo "<td>";
+		echo " ".$i;           
+		echo "</td>";
+
+		echo "<td>";
+		echo " R$ ".$valorp;
+		echo "</td>";
+
+		echo "<td>";
+		echo " ".$m;
+		echo "</td>"; 
+
+		echo "<td>";
+		echo "1,64%";
+		echo "</td>";
+
+		echo "</tr>";  
+		echo "</table></center>"; 
+	}   
+	for($i=24;$i<=60;$i++){  
+
+		$m=$valor*(1+0.0256)**$i;
+		$m= number_format($m, 2, '.', '');
+		$valorp=$m/$i;
+		$valorp = number_format($valorp, 2, '.','');
+
+		echo "<center><table border='1'>";     
+		echo "<tr>";
+
+		echo "<td>";
+		echo " ".$i;           
+		echo "</td>";
+
+		echo "<td>";
+		echo " R$ ".$valorp;
+		echo "</td>";
+
+		echo "<td>";
+		echo " ".$m;
+		echo "</td>"; 
+
+		echo "<td>";
+		echo "2,56%";
+		echo "</td>";
+
+		echo "</tr>"; 
+
+		echo "</table></center>"; 
+	} 
+	echo "</table></center>";
+
+	?>
 </body>
 
 
