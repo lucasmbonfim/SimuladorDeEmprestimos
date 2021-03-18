@@ -36,9 +36,8 @@ echo "<h1>".$nome. " | CPF do usuário: ".$cpf. "<br></h2>";
 		$limite=strlen($cpf);
 		if ($limite<11 || $limite>14)
 		{
-			echo "<h1>Quantidades de digitos do CPF inválida!</h1>";
-
 			return false;
+			echo "<h1>Quantidades de digitos do CPF inválida!</h1>";
 		}
 
 		for ($i=0, $x=10; $i<=8;$i++,$x--){
