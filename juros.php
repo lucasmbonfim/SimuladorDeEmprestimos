@@ -8,6 +8,12 @@
             font-family: sans-serif
         }
 
+        body{
+            text-align: center;
+            background:blue;
+            color: white;
+        }
+
     </style>
     <meta charset="UTF-8">
     <title>Simulador</title>
@@ -38,9 +44,9 @@ $resultvalor = number_format($m, 2);
 $resultpar = number_format($valpar, 2);
 //Resumo da Simulação
 echo "<h1>Empréstimo:</h1><br>";
-echo "<b>Total R$ :</b>".$resultvalor."<br><br>";
-echo "<b>Valor da(s) parcela(s) : </b>".$resultpar;
-echo "<br><br>Taxa de serviço : ".$tx."<br><br>";
+echo "<b>Total R$:</b> ".$resultvalor."<br><br>";
+echo "<b>Valor da(s) parcela(s): </b> ".$resultpar;
+echo "<br><br>Taxa de serviço: ".$tx."%<br><br>";
     }
 ?>
 </body>
