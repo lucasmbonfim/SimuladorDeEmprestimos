@@ -2,16 +2,21 @@
 <head>
 
 	<style>
+
+		h1{
+            color: rgb(54 54 54);
+            font-family: sans-serif
+        }
 		
 		#retornar{
-			color: white;
+			color: rgb(54 54 54);
             font-family: sans-serif
 		}
 
         body{
             text-align: center;
-            background:blue;
-            color: white;
+            background: rgb(144 238 144);
+            color: rgb(54 54 54);
         }
 
 
@@ -25,7 +30,7 @@
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 
-echo "<h1>".$nome. " | CPF do usuário: ".$cpf. "<br></h2>";
+echo "<h1>".$nome. " || CPF: ".$cpf. "<br></h1>";
 
 	function isCpf($cpf){
 		$cpf = preg_replace('/[^0-9]/','',$cpf); // pegando somente os numeros do cpf 
@@ -36,7 +41,7 @@ echo "<h1>".$nome. " | CPF do usuário: ".$cpf. "<br></h2>";
 		$limite=strlen($cpf);
 		if ($limite<11 || $limite>14)
 		{
-			echo "<h1>Quantidades de digitos do CPF inválida!</h1>";
+			echo "<h3>Quantidades de digitos do CPF inválida!</h3>";
 			return false;
 		}
 
@@ -46,8 +51,8 @@ echo "<h1>".$nome. " | CPF do usuário: ".$cpf. "<br></h2>";
 
 		for ($i=0, $x=11; $i<=9; $i++, $x--){
 			if (str_repeat($i, 11) == $cpf){
+				echo " <br><h3>CPF inválido. Todos os digitos são iguais!</h3>";
 				return false;
-				echo " <br>CPF inválido. Digitos todos iguais!";
 				break;
 			}
 
@@ -71,7 +76,7 @@ echo "<h1>".$nome. " | CPF do usuário: ".$cpf. "<br></h2>";
 		include("C:/xampp/htdocs/POO2021_4termo/simuemp/simulador.php");
 	
 	}else{
-		echo "<h2>Tente novamente. Revise o CPF inserido</h2>";
+		echo "<h3>Favor, tente novamente</h3>";
 	}
 
 ?>
