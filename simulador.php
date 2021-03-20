@@ -4,12 +4,12 @@
     <style>
       
         #x{
-            color: white;
+            color: rgb(54 54 54);
             font-family: sans-serif
         }
         #botao{
             width: 150px;
-            color: blue;
+            color: black;
             background-color: white;
         }
         #botao:hover{
@@ -18,8 +18,8 @@
         }
         body{
             text-align: center;
-            background:blue;
-            color: white;
+            background: rgb(144 238 144);
+            color: rgb(54 54 54);
         }
     </style>
     <meta charset="UTF-8">
