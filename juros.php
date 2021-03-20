@@ -4,9 +4,9 @@
 	<style>
 
 		body{
-			text-align: center;
-			background:blue;
-			color: white;
+            text-align: center;
+            background: rgb(144 238 144);
+            color: rgb(54 54 54);
 		}
 		td{
 			text-align: center;
